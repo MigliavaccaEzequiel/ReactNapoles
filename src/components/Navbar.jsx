@@ -1,14 +1,17 @@
-import { BotonNav } from "./BotonNav"
-import { CartWidget } from "./CartWidget"
-import { LogoNav } from "./LogoNav"
+import { BotonNav } from './BotonNav'
+import { CartWidget } from './CartWidget'
+import { LogoNav } from './LogoNav'
 
 export function Navbar () {
     return (
-        <nav style={{display: 'flex', flexDirection: 'row', alignContent: 'center', alignItems:'center', gap: '10px', border: 'solid, green, 2px', padding: '10px'}}>
+        <nav>
             <LogoNav />
-            <BotonNav categoria={'🍕Pizzas'} />
-            <BotonNav categoria={'🥖Sanguches'} />
-            <BotonNav categoria={'🍺Bebidas'} />
+            <div>
+                <BotonNav categoria="" label="📄Todo" />
+                <BotonNav categoria="beauty" label="💄Belleza" />
+                <BotonNav categoria="fragrances" label="🫙Fragancias" />
+                <BotonNav categoria="furniture" label="🪑Muebles" />
+            </div>
             <CartWidget />
         </nav>
     )

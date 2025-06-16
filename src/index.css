@@ -34,21 +34,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #57db00;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -65,4 +50,53 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Clases Napoles */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: solid, green, 2px;
+  padding: 10px;
+}
+.boton-filtro {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin: 5px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #57db00;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.boton-filtro:hover {
+  border-color: #646cff;
+  background-color: #58db00a2;
+}
+.boton-filtro-activo {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin: 5px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #d7db00;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.contador {
+  text-align: center;
+  margin: 1rem;
+}
+button {
+  margin: 1rem;
+}
+.borde-rojo {
+  border: solid, red, 1px;
 }
