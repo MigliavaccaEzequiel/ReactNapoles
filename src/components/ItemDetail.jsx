@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card'
 import { ItemCount } from "./ItemCount";
+import Button from 'react-bootstrap/Button'
 
 export function ItemDetail ({ detail }) {
     return (
@@ -11,6 +12,8 @@ export function ItemDetail ({ detail }) {
                     <Card.Text>{detail?.description}</Card.Text>
                     <Card.Text>{detail?.price}</Card.Text>
                     <ItemCount />
+                    <Button>Volver</Button>
+                    <Button>Agregar al carrito</Button>
                 </Card.Body>
             </Card>
         </div>
