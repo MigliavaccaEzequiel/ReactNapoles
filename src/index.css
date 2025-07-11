@@ -53,20 +53,42 @@ button:focus-visible {
 }
 
 /* Clases Napoles */
+.centrar-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.contenedor-fila {
+   display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.margenes {
+  margin: 10px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   border: solid, green, 2px;
-  padding: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
+
 .boton-filtro {
   border-radius: 8px;
   border: 1px solid transparent;
   margin: 5px;
-  padding: 0.6em 1.2em;
+  padding: 0.6em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -74,10 +96,12 @@ nav {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .boton-filtro:hover {
   border-color: #646cff;
   background-color: #58db00a2;
 }
+
 .boton-filtro-activo {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -90,13 +114,88 @@ nav {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .contador {
   text-align: center;
   margin: 1rem;
 }
+
 button {
   margin: 1rem;
+  cursor: pointer;
 }
+
 .borde-rojo {
   border: solid, red, 1px;
+}
+
+.borde-card {
+  border: solid, yellow, 1px;
+  border-radius: 10px;  
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.navbar-responsive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar-responsive .menu-hambur {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.navbar-responsive .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-responsive .menu-hambur {
+    display: block;
+  }
+  
+  .navbar-responsive .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .navbar-responsive .nav-links.activo {
+    display: flex;
+  }
 }

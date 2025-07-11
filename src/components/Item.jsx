@@ -6,11 +6,19 @@ export function Item ({ item }) {
     const navigate = useNavigate()
 
     return (
-        <Card className='w-100'>
-            <Card.Img variant='top' src={item.thumbnail} />
+        <Card className='w-100 h-100 borde-card'>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Card.Img 
+                    className='img-fluid'
+                    variant='top'
+                    src={item.imagen} 
+                    style={{ height: 'auto', objectFit: 'cover' }}
+                    alt={item.descripcion}
+                />
+            </div>
             <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
-                <Card.Text>{item.description}</Card.Text>
+                <Card.Title>{item.nombre}</Card.Title>
+                <Card.Text>{item.descripcion}</Card.Text>
                 <Button 
                     variant="dark"
                     onClick={() => navigate(`/item/${item.id}`)}

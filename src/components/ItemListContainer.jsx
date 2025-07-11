@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, } from 'react'
 import { useParams } from 'react-router'
 import { ItemList } from './ItemList'
+import { obtenerProductos, filtrarPorCategoria } from '../firebase/db'
 
 export function ItemListContainer () {
     const [items, setItems] = useState([])
@@ -8,13 +9,13 @@ export function ItemListContainer () {
     
     useEffect(() => {
         if (categoriaProducto) {
-            fetch(`https://dummyjson.com/products/category/${categoriaProducto}`)
-            .then(res => res.json())
-            .then(res => setItems(res.products));
+            filtrarPorCategoria(categoriaProducto)
+                .then(productos => setItems(productos))
         } else {
-            fetch('https://dummyjson.com/products?limit=15')
-            .then(res => res.json())
-            .then(res => setItems(res.products));
+            obtenerProductos()
+            .then(productos => {
+                setItems(productos)
+            })
         }
     }, [categoriaProducto])
     

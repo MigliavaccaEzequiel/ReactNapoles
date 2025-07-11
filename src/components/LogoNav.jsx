@@ -1,5 +1,5 @@
 export function LogoNav () {
     return (
-        <p>🫒Pizzeria Nápoles🫒</p>
+        <h2>🫒Nápoles🫒</h2>
     )
 }
