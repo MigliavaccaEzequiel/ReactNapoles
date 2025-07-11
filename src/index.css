@@ -63,7 +63,7 @@ button:focus-visible {
 }
 
 .contenedor-fila {
-   display: flex;
+  display: flex;
   gap: 10px;
   justify-content: space-around;
   align-items: center;

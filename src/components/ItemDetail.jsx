@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card'
-import { ItemCount } from "./ItemCount";
+import { ItemCount } from "./ItemCount"
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router'
 

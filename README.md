@@ -1,12 +1,53 @@
-# React + Vite
+# ReactNapoles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado en el curso de React JS de Coderhouse. Se trata de una tienda online que permite navegar por categorías de productos, ver detalles y gestionar un carrito de compras de forma dinámica utilizando React y Firebase.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Funcionalidades principales
 
-## Expanding the ESLint configuration
+- Navegación SPA con React Router DOM.
+- Filtrado de productos por categoría y visualización de detalle individual.
+- Formulario de checkout con envío de orden a Firebase y timestamp.
+- Sistema de carrito con:
+  - Agregado y eliminación de productos.
+  - Visualización de cantidad total.
+  - Vaciar carrito.
+  - Alerta de confirmación mediante SweetAlert.
+- Uso de contexto global (`React Context API`) para manejar el carrito de manera centralizada.
+- Comunicación con Firebase/Firestore para obtener productos.
+- Diseño responsivo básico y menú hamburguesa funcional.
+- Alternancia de vistas mediante rutas dinámicas (`/categoria/:categoriaProducto` y `/item/:id`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologías y librerías
+
+- [React](https://react.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Firebase / Firestore](https://firebase.google.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [Vite](https://vitejs.dev/) (para el entorno de desarrollo)
+
+---
+
+## 🌐 Deploy
+
+Podés ver el proyecto en línea en Vercel:  
+🔗 [https://react-napoles.vercel.app](https://react-napoles.vercel.app)
+
+---
+
+## 👨‍💻 Autor
+
+Ezequiel Migliavacca  
+Proyecto realizado para el curso de **React JS** de [Coderhouse](https://www.coderhouse.com/).
+
+---
+
+## 🔧 Posibles mejoras
+
+- Validar stock en tiempo real desde Firestore.
+
+---
